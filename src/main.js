@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
-
+import App from './App'
+import {mixin} from './mixin'
+Vue.mixin(mixin)
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+    el: "#app",
+    render: h => h(App),
+    comments: { App }
+})
